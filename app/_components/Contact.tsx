@@ -16,6 +16,7 @@ import { useForm } from "react-hook-form"
 import { Textarea } from "@/components/ui/textarea"
 import emailjs from '@emailjs/browser';
 import React, { useRef } from "react"
+import { Send } from "lucide-react"
 
  
 const formSchema = z.object({
@@ -62,8 +63,8 @@ const Contact = () => {
 
 	  return (
 		<div className="py-8 px-16">
-			<h2 className="text-4xl font-semibold underline">Contact.</h2>
-			<div className="mt-8 flex flex-col gap-8 mt-24  items-center justify-center">
+			<h2 className="text-4xl font-semibold underline text-center text-[#393D3F]">Contact me.</h2>
+			<div className=" flex flex-col gap-8 p-24 items-center justify-center">
 				<Form {...form}>
 				<form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex flex-col w-1/2">
 					<FormField
@@ -72,7 +73,7 @@ const Contact = () => {
 					render={({ field }) => (
 						<FormItem>
 						<FormControl>
-							<Input placeholder="name" {...field} />
+							<Input placeholder="name" {...field} className=""  />
 						</FormControl>
 						<FormMessage />
 						</FormItem>
@@ -96,13 +97,13 @@ const Contact = () => {
 					render={({ field }) => (
 						<FormItem>
 						<FormControl>
-							<Textarea placeholder="message" {...field} />
+							<Textarea placeholder="message" {...field} className="border-black border bg-[#C5EFCB] text-sm placeholder:text-[#393D3F]" />
 						</FormControl>
 						<FormMessage />
 						</FormItem>
 					)}
 					/>
-					<Button type="submit">Submit</Button>
+					<Button type="submit" className="gap-2">Submit <Send width={20} height={20} /></Button>
 				</form>
 				</Form>
 			</div>

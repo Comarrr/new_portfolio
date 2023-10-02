@@ -8,8 +8,7 @@ import Link from "next/link"
 const Links = () => {
 	
 	return (
-		<>
-			<div className="flex flex-col gap-2 absolute bottom-1/4 right-0 p-6">
+			<div className="flex flex-col gap-2 fixed bottom-1/4 right-0 p-6">
 				<Separator orientation="vertical" />
 				<Link href={"https://github.com/Comarrr"} target="_blank">
 					<Github />
@@ -22,7 +21,6 @@ const Links = () => {
 				</Link>
 				<Separator orientation="vertical"/>
 			</div>
-		</>
 	)
 }
 

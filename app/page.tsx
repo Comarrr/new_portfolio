@@ -4,20 +4,42 @@ import Links from './_components/Links'
 import Contact from './_components/Contact'
 import Skills from './_components/Skills'
 
+import Bitmoji from '@/public/bitmoji.png'
+import { Button } from '@/components/ui/button'
+import { Download, MessageSquare } from 'lucide-react'
+import Projects from './_components/Projects'
+
 export default function Home() {
   return (
 	<>
-		<div className="py-8 bg-gradient-to-tr from-[#C5EFCB] to-[#C0FBFF] min-h-screen">
+		<div className="py-8 bg-gradient-to-tr from-[#C1EAFC] to-[#BDD5F9] min-h-screen">
 			<Links />
-        	<div >
+        	<div>
           		<div className='px-8'>
               		<Navbar />
           		</div>
-				<div className=" flex flex-col justify-center items-center lg:mt-24 gap-8">
-					<h1 className="text-8xl font-semibold">FrontEnd Developer.</h1>
-					<Image src="/bitmoji.png" alt="hero" width={350} height={350} />
+				<div className="flex items-center justify-evenly">
+					<div className="pt-24 flex flex-col mb-11">
+						<p className="text-xl font-semibold">Hello there ! 👋</p>
+						<h1 className="text-8xl font-bold">I'm Comarr</h1>
+						<p className="text-6xl font-semibold mt-4">FontEnd Developer</p>
+					</div>
+					<div className="">
+						<Image src={Bitmoji} alt="hero" width={200} height={200} />
+					</div>
+				</div>
+				<div className='flex items-center justify-center gap-8 p-8'>
+					<Button className='gap-2'>Download my resume <Download width={20} height={20} /></Button>
+					<Button className='gap-2'>Text me <MessageSquare width={20} height={20} /></Button>
+				</div>
+				<div className='relative left-1/2 transform -translate-x-1/2 bg-[#C5EFCB] shadow-grey w-2/3 mt-16'>
+					<div className='flex flex-col gap-8 p-8'>
+						<p className='text-xl'>I am 24 years old, and I have a bachelor's degree in web development from HETIC. I worked in a media monitoring company called Mediatree as a web developer where I was able to redesign their website and work on their internal tool.</p>
+						<p className='text-xl'>I'm currently looking for a job as a React developer. With my experience and skills in web development, I'm passionate about creating innovative solutions to meet the needs of users and businesses.</p>
+					</div>
 				</div>
 			</div>
+			<Projects />
 			<Skills />
 			<Contact />
 		</div>

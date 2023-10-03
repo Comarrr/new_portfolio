@@ -8,7 +8,8 @@ export type ProjectData = {
 	id: number,
 	title: string,
 	description: string,
-	github_url: string,
+	github_url?: string,
+	website_url?: string,
 	technos: {
 		title: string,
 		img: StaticImageData
@@ -28,18 +29,32 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 			<CardContent>
 				<CardDescription>{project.description}</CardDescription>
 			</CardContent>
-			<CardFooter className="flex items-center justify-between">
-				{project.technos.map((techno) => (
-					<div className="flex items-center gap-2">
-						<p>Stacks :</p>
-						<Image key={techno.title} src={techno.img} alt={techno.title} width={40} height={40} />
-					</div>
-				))}
-				<Button >
-					<Link className="flex items-center gap-2" href={project.github_url} target="_blank">
-						View on Github <Github />
-					</Link>
-				</Button>
+			<CardFooter className="flex flex-col gap-4 items-center justify-center md:flex-row md:justify-between">
+				<p className="flex items-center gap-2 text-sm sm:text-base">Technos : {project.technos.map((techno) => (
+						<Image key={techno.title} src={techno.img} alt={techno.title} layout="fixed" objectFit="cover" className=" h-8 w-8"/>
+				))}</p>
+				{
+					project.website_url ? (
+						<Button >
+							<Link className="flex items-center gap-2" href={project.website_url} target="_blank">
+								View website
+							</Link>
+						</Button>
+					)
+						: null
+				}
+				{
+					project.github_url ? (
+						<Button >
+							<Link className="flex items-center gap-2" href={project.github_url} target="_blank">
+								View on Github <Github />
+							</Link>
+						</Button>
+					)
+						: null
+				}
+
+				
 			</CardFooter>
 		</Card>
 	  )

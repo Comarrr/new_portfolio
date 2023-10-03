@@ -10,42 +10,45 @@ import {
     NavigationMenuList,
     navigationMenuTriggerStyle,
   } from "@/components/ui/navigation-menu"
-import { Layers } from 'lucide-react'
+import { Separator } from '@/components/ui/separator'
 
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center p-8 border border-slate-100 bg-white/60 backdrop-blur-lg drop-shadow-xl rounded-2xl'>
+    <nav className='flex justify-between items-center '>
         <Link href='/' className='text-2xl  flex items-center gap-4'>
-            <Layers className='flex items-center gap-2'/>
-            <span className='font-semibold'>Comarrr</span>  
+            <span className='font-semibold'>Comarrr.</span>  
         </Link>
-
         <NavigationMenu>
       		<NavigationMenuList>
         		<NavigationMenuItem>
-          			<Link href="/about" legacyBehavior passHref>
+          			<Link href="#projects" legacyBehavior passHref>
             		<NavigationMenuLink className={navigationMenuTriggerStyle({className: 'bg-transparent'})}>
-              			About me
+              			projects.
             		</NavigationMenuLink>
           			</Link>
         		</NavigationMenuItem>
 				<NavigationMenuItem>
-					<Link href="/projects" legacyBehavior passHref>
-						<NavigationMenuLink className={navigationMenuTriggerStyle({className: 'bg-transparent'})}>
-						Projects
+					<Link href="#skills" legacyBehavior passHref>
+						<NavigationMenuLink className={navigationMenuTriggerStyle({className: 'bg-transparent'}) }>
+						skills.
 						</NavigationMenuLink>
 					</Link>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<Link href="/work" legacyBehavior passHref>
-						<NavigationMenuLink className={navigationMenuTriggerStyle({className: 'bg-primary text-white hover:bg-primary-foreground'})}>
-						Work with me
+					<Link href="#contact" legacyBehavior passHref>
+						<NavigationMenuLink className={navigationMenuTriggerStyle({className: 'bg-transparent'})}>
+						contact.
 						</NavigationMenuLink>
 					</Link>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 		</NavigationMenu>
+		<div className="flex gap-4 items-center justify-center">
+			<span>FR</span>
+			<Separator orientation="vertical" className='h-8 bg-[#393D3F]'/>
+			<span>EN</span>
+		</div>
     </nav>
   )
 }

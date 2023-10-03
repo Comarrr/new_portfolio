@@ -66,7 +66,7 @@ const Contact = () => {
 			<h2 className="text-4xl font-semibold underline text-center text-[#393D3F]">Contact me.</h2>
 			<div className=" flex flex-col gap-8 p-24 items-center justify-center">
 				<Form {...form}>
-				<form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex flex-col w-1/2">
+				<form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex flex-col w-full sm:w-3/4 md:w-1/2 lg:w-1/3">
 					<FormField
 					control={form.control}
 					name="name"

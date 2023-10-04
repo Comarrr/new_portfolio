@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -31,13 +31,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 			</CardContent>
 			<CardFooter className="flex flex-col gap-4 items-center justify-center md:flex-row md:justify-between">
 				<p className="flex items-center gap-2 text-sm sm:text-base">Technos : {project.technos.map((techno) => (
-						<Image key={techno.title} src={techno.img} alt={techno.title} layout="fixed" objectFit="cover" className=" h-8 w-8"/>
+						<Image key={techno.title} src={techno.img} alt={techno.title} layout="fixed" objectFit="cover" className=" h-8 w-8 bg-transparent"/>
 				))}</p>
 				{
 					project.website_url ? (
 						<Button >
 							<Link className="flex items-center gap-2" href={project.website_url} target="_blank">
-								View website
+								View website <Globe />
 							</Link>
 						</Button>
 					)

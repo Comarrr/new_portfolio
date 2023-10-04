@@ -8,6 +8,10 @@ import Bitmoji from '@/public/bitmoji.png'
 import { Button } from '@/components/ui/button'
 import { Download, MessageSquare } from 'lucide-react'
 import Project from './_components/Projects/Project'
+import Link from 'next/link'
+
+/* import myResume from "@/public/my_resume.pdf"
+ */
 
 export default function Home() {
   return (
@@ -15,10 +19,10 @@ export default function Home() {
 		<div className="py-8 bg-gradient-to-tr from-[#C1EAFC] to-[#BDD5F9] min-h-screen">
 			<Links />
         	<div>
-          		{/* <div className='px-8'>
+          		<div className='px-8'>
               		<Navbar />
-          		</div> */}
-				<div className="flex flex-col text-center items-center md:text-left md:flex-row md:justify-center">
+          		</div>
+				<div className="flex flex-col text-center items-center md:text-left md:flex-row md:justify-evenly">
 					<div className="pt-24 flex flex-col mb-11">
 						<p className="text-md  md:text-xl font-semibold">Hello there ! 👋</p>
 						<h1 className="text-5xl md:text-8xl font-bold">I'm Comarrr</h1>
@@ -29,8 +33,16 @@ export default function Home() {
 					</div>
 				</div>
 				<div className='flex flex-col sm:flex-row items-center justify-center gap-8 p-8'>
-					<Button className='gap-2'>Download my resume <Download width={20} height={20} /></Button>
-					<Button className='gap-2'>Text me <MessageSquare width={20} height={20} /></Button>
+					<Button>
+						<Link href="#" className='flex items-center justify-center gap-2'>
+							Download my resume <Download width={20} height={20} />
+						</Link>
+					</Button>
+					<Button>
+						<Link href="#contact" className='flex items-center justify-center gap-2'>
+							Text me <MessageSquare width={20} height={20} />
+						</Link>
+					</Button>
 				</div>
 				<div className='relative left-1/2 transform -translate-x-1/2 bg-[#C5EFCB] shadow-lg w-2/3 mt-16'>
 					<div className='flex flex-col gap-8 p-8'>

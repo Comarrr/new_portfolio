@@ -10,8 +10,8 @@ const projects : ProjectData[] = [
 	{
 		id: 1,
 		title: "TriAAAthlon",
-		description: "Un site fait avec Wordpress pour l'association TriAAAthlon qui permet de se renseigner sur les prochains événements de l'association. ",	
-		website_url: "https://www.triaaathlon.org/adrenaline/",
+		description: "A site developed with WordPress for the TriAAAthlon association, offering information on future events organized by the association.",	
+		website_url: "https://www.triaaathlon.org/",
 		technos: [
 			{
 				title: "Wordpress",
@@ -22,7 +22,7 @@ const projects : ProjectData[] = [
 	{
 		id: 2,
 		title: "Nito",
-		description: "Un site pour un artiste sous le nom de Nito qui repertorie ses œuvres musicales que l'on peut écouter directement sur le site ou sur les différentes plateformes de streaming.",	
+		description: "This is a site dedicated to the artist Nito, listing his musical works. You can listen to them directly on the site or via the various streaming platforms.",	
 		github_url: "https://github.com/Comarrr/nino",
 		technos: [
 			{
@@ -42,7 +42,7 @@ const projects : ProjectData[] = [
 	{
 		id: 3,
 		title: "Guess The Flag",
-		description: "Un petit jeu de quiz pour tester votre culture générale en drapeau. ",	
+		description: "enrich your general knowledge of flags with an entertaining quiz game. Test your knowledge and have a great time discovering flags from all over the world.",	
 		github_url: "https://github.com/Comarrr/guess-the-flag",
 		technos: [
 			{

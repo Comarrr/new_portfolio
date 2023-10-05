@@ -22,7 +22,7 @@ export default function Home() {
           		<div className='px-8'>
               		<Navbar />
           		</div>
-				<div className="flex flex-col text-center items-center md:text-left md:flex-row md:justify-evenly pt-24 mb-32">
+				<div className="flex flex-col gap-8 text-center items-center md:text-left md:flex-row md:justify-evenly pt-16 mb-16 md:pt-24 md:mb-32">
 					<div className=" flex flex-col">
 						<p className="text-md  md:text-xl font-semibold">Hello there ! 👋</p>
 						<h1 className="text-5xl md:text-8xl font-bold">I'm Comarrr</h1>
@@ -52,15 +52,15 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='mt-36' id="projects">
-				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-24">My projects.</h2>
+				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-12 md:mb-24">My projects.</h2>
 				<Project />
 			</div>
 			<div className='mt-36' id='skills'>
-				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-24">My skills.</h2>
+				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-12 md:mb-24">My skills.</h2>
 				<Skills />	
 			</div>
 			<div className='mt-36' id='contact'>
-				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-24">Contact me.</h2>
+				<h2 className="text-2xl sm:text-4xl font-semibold underline text-center text-[#393D3F] mb-12 md:mb-24">Contact me.</h2>
 				<Contact />
 			</div>
 			<div className='mt-24'>

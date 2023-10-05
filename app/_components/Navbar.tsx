@@ -22,7 +22,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className='bg-transparent border-gray-200 dark:bg-gray-900'>
+    <nav className='bg-transparent border-gray-200'>
 		<div className='max-w-screen-xl flex flex-wrap md:flex-nowrap items-center justify-between mx-auto p-4'  >
 			<Link href='/' className='text-2xl  flex items-center gap-4'>
 				<span className='font-semibold'>Comarrr.</span>  

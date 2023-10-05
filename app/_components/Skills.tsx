@@ -17,7 +17,7 @@ const Skills = () => {
 	return (
 			<div className="flex flex-col items-center justify-center gap-8 mt-8">
 				<Tabs defaultValue="mastery" className="flex flex-col gap-4 w-full">
-					<TabsList className="flex items-center justify-center gap-4 bg-transparent">
+					<TabsList className="flex items-center justify-center gap-24 bg-transparent mb-16">
 						<TabsTrigger value="mastery">Mastery</TabsTrigger>
 						<TabsTrigger value="learning">Learning</TabsTrigger>
 					</TabsList>

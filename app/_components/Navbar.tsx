@@ -39,7 +39,7 @@ const Navbar = () => {
 			</Button>
 			<div className={`w-full md:flex md:w-auto ${isOpen ? '' : 'hidden'}`} id="navbar-default">
 					<NavigationMenu className='w-full md:w-auto'>
-						<div className=' w-screen'>
+						<div className=' w-screen md:w-auto'>
 							<NavigationMenuList className=' flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 '>
 								<NavigationMenuItem>
 									<Link href="#projects" legacyBehavior passHref>

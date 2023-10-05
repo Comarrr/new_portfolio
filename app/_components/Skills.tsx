@@ -34,7 +34,7 @@ const Skills = () => {
 									<Image src="/sass.png" alt="hero" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/figma.png" alt="hero" width={60} height={60} />
+									<Image src="/figma.png" alt="hero" width={30} height={30} />
 								</div>
 								<div className="flex justify-center items-center">
 									<Image src="/github.png" alt="hero" width={60} height={60} />

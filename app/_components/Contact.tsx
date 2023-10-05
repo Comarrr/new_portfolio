@@ -62,9 +62,8 @@ const Contact = () => {
 	  }
 
 	  return (
-		<div className="py-8 px-16">
-			<h2 className="text-4xl font-semibold underline text-center text-[#393D3F]">Contact me.</h2>
-			<div className=" flex flex-col gap-8 p-24 items-center justify-center">
+		<div className="">
+			<div className="relative flex flex-col gap-8 items-center justify-center px-8 w-2/3 left-1/2 transform -translate-x-1/2">
 				<Form {...form}>
 				<form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 flex flex-col sm:w-3/4  min-w-[250px]">
 					<FormField
@@ -103,7 +102,7 @@ const Contact = () => {
 						</FormItem>
 					)}
 					/>
-					<Button type="submit" className="gap-2">Submit <Send width={20} height={20} /></Button>
+					<Button type="submit" className="gap-2 relative w-1/2 left-1/2 transform -translate-x-1/2">Submit <Send width={20} height={20} /></Button>
 				</form>
 				</Form>
 			</div>

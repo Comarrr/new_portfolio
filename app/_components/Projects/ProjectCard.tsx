@@ -4,6 +4,10 @@ import { Github, Globe } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
+const imageLoader = ({ src }: { src: string }) => {
+	return `https://comarrr.dev/${src}`
+}
+
 export type ProjectData = {
 	id: number,
 	title: string,
@@ -31,7 +35,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 			</CardContent>
 			<CardFooter className="flex flex-col gap-4 items-center justify-center md:flex-row md:justify-between">
 				<p className="flex items-center gap-2 text-sm sm:text-base">Technos : {project.technos.map((techno) => (
-						<Image key={techno.title} src={techno.img} alt={techno.title} layout="fixed" objectFit="cover" className=" h-8 w-8 bg-transparent"/>
+						<Image loader={imageLoader} key={techno.title} src={techno.img} alt={techno.title} layout="fixed" objectFit="cover" className=" h-8 w-8 bg-transparent"/>
 				))}</p>
 				{
 					project.website_url ? (

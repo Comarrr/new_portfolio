@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Navbar from './_components/Navbar'
 import Links from './_components/Links'
@@ -10,8 +12,10 @@ import { Download, MessageSquare } from 'lucide-react'
 import Project from './_components/Projects/Project'
 import Link from 'next/link'
 
-/* import myResume from "@/public/my_resume.pdf"
- */
+const imageLoader = ({ src }: { src: string }) => {
+	return `https://comarrr.dev/${src}`
+}
+
 
 export default function Home() {
   return (
@@ -29,12 +33,12 @@ export default function Home() {
 						<p className="text-2xl md:text-6xl font-semibold mt-4">FontEnd Developer</p>
 					</div>
 					<div>
-						<Image src={Bitmoji} alt="hero" width={200} height={200} />
+						<Image loader={imageLoader} src="bitmoji.png" alt="hero" width={200} height={200} />
 					</div>
 				</div>
 				<div className='flex flex-col sm:flex-row items-center justify-center gap-8 mb-20'>
 					<Button>
-						<Link href="#" className='flex items-center justify-center gap-2'>
+						<Link href="/my_resume.pdf" target="_blank" className='flex items-center justify-center gap-2'>
 							Download my resume <Download width={20} height={20} />
 						</Link>
 					</Button>

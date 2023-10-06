@@ -12,6 +12,11 @@ import {
 } from "@/components/ui/tabs"
 import Image from "next/image"
 
+const imageLoader = ({ src }: { src: string }) => {
+	return `https://comarrr.dev/${src}`
+}
+
+
 const Skills = () => {
 
 	return (
@@ -25,28 +30,28 @@ const Skills = () => {
 						<Card className="w-3/4 bg-transparent border border-black rounded-lg">
 							<CardContent className="grid grid-cols-4 gap-8 items-center justify-center py-6">
 								<div className="flex justify-center items-center">
-									<Image src="/js.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="js.png" alt="JavaScript" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/react.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="react.png" alt="React" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/sass.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="sass.png" alt="Sass" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/figma.png" alt="hero" width={30} height={30} />
+									<Image loader={imageLoader} src="figma.png" alt="Figma" width={30} height={30} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/github.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="github.png" alt="Github" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/nodejs.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="nodejs.png" alt="Nodejs" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/threejs.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="threejs.png" alt="Threejs" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/wordpress.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="wordpress.png" alt="Wordpress" width={60} height={60} />
 								</div>
 							</CardContent>
 						</Card>
@@ -55,16 +60,16 @@ const Skills = () => {
 						<Card className="w-3/4 bg-transparent border border-black rounded-lg">
 							<CardContent className="grid grid-cols-2 gap-8 items-center justify-center py-6">
 								<div className="flex justify-center items-center">
-									<Image src="/typescript.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="typescript.png" alt="Typescript" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/nextjs.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="nextjs.png" alt="Nextjs" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/tailwind.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="tailwind.png" alt="Tailwind" width={60} height={60} />
 								</div>
 								<div className="flex justify-center items-center">
-									<Image src="/postman.png" alt="hero" width={60} height={60} />
+									<Image loader={imageLoader} src="expo.png" alt="Expo" width={60} height={60} />
 								</div>
 							</CardContent>
 						</Card>
